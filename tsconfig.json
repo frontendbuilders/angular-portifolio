@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "frontendbuilders-library": [
+        "dist/frontendbuilders-library"
+      ],
+      "frontendbuilders-library/*": [
+        "dist/frontendbuilders-library/*"
+      ]
+    }
   }
 }

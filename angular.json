@@ -116,6 +116,403 @@
           }
         }
       }
+    },
+    "games-rank": {
+      "root": "projects/games-rank/",
+      "sourceRoot": "projects/games-rank/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/games-rank",
+            "index": "projects/games-rank/src/index.html",
+            "main": "projects/games-rank/src/main.ts",
+            "polyfills": "projects/games-rank/src/polyfills.ts",
+            "tsConfig": "projects/games-rank/tsconfig.app.json",
+            "assets": [
+              "projects/games-rank/src/favicon.ico",
+              "projects/games-rank/src/assets"
+            ],
+            "styles": [
+              "projects/games-rank/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/games-rank/src/environments/environment.ts",
+                  "with": "projects/games-rank/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "games-rank:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "games-rank:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "games-rank:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/games-rank/src/test.ts",
+            "polyfills": "projects/games-rank/src/polyfills.ts",
+            "tsConfig": "projects/games-rank/tsconfig.spec.json",
+            "karmaConfig": "projects/games-rank/karma.conf.js",
+            "styles": [
+              "projects/games-rank/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/games-rank/src/favicon.ico",
+              "projects/games-rank/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/games-rank/tsconfig.app.json",
+              "projects/games-rank/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "games-rank-e2e": {
+      "root": "projects/games-rank-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/games-rank-e2e/protractor.conf.js",
+            "devServerTarget": "games-rank:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "games-rank:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/games-rank-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "bolao-do-gordao": {
+      "root": "projects/bolao-do-gordao/",
+      "sourceRoot": "projects/bolao-do-gordao/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/bolao-do-gordao",
+            "index": "projects/bolao-do-gordao/src/index.html",
+            "main": "projects/bolao-do-gordao/src/main.ts",
+            "polyfills": "projects/bolao-do-gordao/src/polyfills.ts",
+            "tsConfig": "projects/bolao-do-gordao/tsconfig.app.json",
+            "assets": [
+              "projects/bolao-do-gordao/src/favicon.ico",
+              "projects/bolao-do-gordao/src/assets"
+            ],
+            "styles": [
+              "projects/bolao-do-gordao/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/bolao-do-gordao/src/environments/environment.ts",
+                  "with": "projects/bolao-do-gordao/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "bolao-do-gordao:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bolao-do-gordao:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "bolao-do-gordao:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bolao-do-gordao/src/test.ts",
+            "polyfills": "projects/bolao-do-gordao/src/polyfills.ts",
+            "tsConfig": "projects/bolao-do-gordao/tsconfig.spec.json",
+            "karmaConfig": "projects/bolao-do-gordao/karma.conf.js",
+            "styles": [
+              "projects/bolao-do-gordao/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/bolao-do-gordao/src/favicon.ico",
+              "projects/bolao-do-gordao/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/bolao-do-gordao/tsconfig.app.json",
+              "projects/bolao-do-gordao/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "bolao-do-gordao-e2e": {
+      "root": "projects/bolao-do-gordao-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/bolao-do-gordao-e2e/protractor.conf.js",
+            "devServerTarget": "bolao-do-gordao:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "bolao-do-gordao:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/bolao-do-gordao-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "comedia-na-rede": {
+      "root": "projects/comedia-na-rede/",
+      "sourceRoot": "projects/comedia-na-rede/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/comedia-na-rede",
+            "index": "projects/comedia-na-rede/src/index.html",
+            "main": "projects/comedia-na-rede/src/main.ts",
+            "polyfills": "projects/comedia-na-rede/src/polyfills.ts",
+            "tsConfig": "projects/comedia-na-rede/tsconfig.app.json",
+            "assets": [
+              "projects/comedia-na-rede/src/favicon.ico",
+              "projects/comedia-na-rede/src/assets"
+            ],
+            "styles": [
+              "projects/comedia-na-rede/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/comedia-na-rede/src/environments/environment.ts",
+                  "with": "projects/comedia-na-rede/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "comedia-na-rede:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "comedia-na-rede:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "comedia-na-rede:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/comedia-na-rede/src/test.ts",
+            "polyfills": "projects/comedia-na-rede/src/polyfills.ts",
+            "tsConfig": "projects/comedia-na-rede/tsconfig.spec.json",
+            "karmaConfig": "projects/comedia-na-rede/karma.conf.js",
+            "styles": [
+              "projects/comedia-na-rede/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/comedia-na-rede/src/favicon.ico",
+              "projects/comedia-na-rede/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/comedia-na-rede/tsconfig.app.json",
+              "projects/comedia-na-rede/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "comedia-na-rede-e2e": {
+      "root": "projects/comedia-na-rede-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/comedia-na-rede-e2e/protractor.conf.js",
+            "devServerTarget": "comedia-na-rede:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "comedia-na-rede:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/comedia-na-rede-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "frontendbuilders-library": {
+      "root": "projects/frontendbuilders-library",
+      "sourceRoot": "projects/frontendbuilders-library/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/frontendbuilders-library/tsconfig.lib.json",
+            "project": "projects/frontendbuilders-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/frontendbuilders-library/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/frontendbuilders-library/src/test.ts",
+            "tsConfig": "projects/frontendbuilders-library/tsconfig.spec.json",
+            "karmaConfig": "projects/frontendbuilders-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/frontendbuilders-library/tsconfig.lib.json",
+              "projects/frontendbuilders-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-portifolio"
